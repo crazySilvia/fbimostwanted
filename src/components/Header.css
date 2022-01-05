@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    color: papayawhip;
+    flex-direction: column;
+    font-family: "Hiragino Kaku Gothic Pro";
+    align-items: center;
+    text-align: center;
+
+}
+h1 {
+    margin-bottom: 0;
+}
+
+text {
+    margin-bottom: 2rem;
+}

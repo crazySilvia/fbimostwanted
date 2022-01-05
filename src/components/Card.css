@@ -1,0 +1,14 @@
+.card{
+    text-align: center;
+    min-width: 15rem;
+    max-width: 15rem;
+    background-color: darkgray;
+    border: solid 1px red;
+}
+ul{
+    text-align: left;
+
+}
+li{
+    max-width: 12rem;
+}
