@@ -3,12 +3,17 @@
     min-width: 15rem;
     max-width: 15rem;
     background-color: darkgray;
-    border: solid 1px red;
+    border: solid 1px papayawhip;
 }
 ul{
     text-align: left;
-
 }
 li{
     max-width: 12rem;
+}
+img {
+    border: solid 2px black;
+}
+h3{
+    min-height: 52px;
 }

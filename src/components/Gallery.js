@@ -25,8 +25,8 @@ export default function Gallery(props){
                 <Card
                     key = {filteredChar.uid}
                     title = {filteredChar.title}
-                    aliases = {filteredChar.aliases}
-                    reward_text = {filteredChar.reward_text}
+                    thumb = {filteredChar.images[0].thumb}
+                    reward_text = {filteredChar.reward_text ? filteredChar.reward_text : "no offering"}
                 />
             ))}
         </div>)
