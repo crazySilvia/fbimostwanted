@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import {getVillain} from "../services/ApiService";
 
 export default function Gallery(props){
+    //sagt, dass die Variable "chars" geändert werden kann, useState sagt, was es sein soll
     const [chars, setChars] = useState()
 
     useEffect(() => {
