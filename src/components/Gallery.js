@@ -3,15 +3,32 @@ import Card from "./Card";
 import {useEffect, useState} from "react";
 import {getVillain} from "../services/ApiService";
 
-export default function Gallery(props){
+export default function Gallery(){
     //sagt, dass die Variable "chars" geändert werden kann, useState sagt, was es sein soll
-    const [chars, setChars] = useState()
+    const [chars, setChars] = useState([])
+
+    const setupChars = async () => {
+        let allItems = []
+        for (let i = 1; i < 48; i++) {
+
+            await getVillain(i).then(data => {
+
+                    if (data && data.items ) {
+                        console.log(data.items)
+                        allItems = allItems.concat(data.items)
+                    }
+                }
+            )
+            console.log(allItems.length)
+        }
+        setChars(allItems)
+    }
 
     useEffect(() => {
-        setupChars().catch(e => console.log(e.message()))
+        setupChars()//.catch(e => console.log(e.message()))
     }, [])
 
-    const setupChars = () => getVillain().then(data => setChars(data.items))
+
 
     if(!chars){
         return<div className="gallery">
