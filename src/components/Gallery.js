@@ -11,10 +11,12 @@ export default function Gallery(){
         let allItems = []
         for (let i = 1; i < 48; i++) {
 
+            // eslint-disable-next-line no-loop-func
             await getVillain(i).then(data => {
 
                     if (data && data.items ) {
                         console.log(data.items)
+                        // eslint-disable-next-line
                         allItems = allItems.concat(data.items)
                     }
                 }
